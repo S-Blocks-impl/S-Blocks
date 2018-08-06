@@ -1,0 +1,17 @@
+enclave{
+    trusted{
+
+        public int ecall_generat_router();
+        public int ecall_configure([in,size=conf_length]char* conf, int conf_length);
+        public int ecall_initialize();
+        public int ecall_command_routerTable();
+        public int ecall_destroy();
+        public int ecall_simple_action([in,out,size=packet_length]void *packet, int packet_length);
+        public int ecall_batch_simple_action([in,out,size=packet_length]void *packet, int packet_length);
+        };
+    untrusted {
+        void ocall_to_device([in,size=packet_length]void *packet, int packet_length);
+        void ocall_print([in, string] const char *str);
+    };
+
+};
