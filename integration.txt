@@ -1,0 +1,26 @@
+Integration of firewall. 
+
+decompress vnids.tar.gz ==> You will get click directory. 
+decompress firewall_click_script.tar.gz  ==> You will get evaluation directory. 
+
+You can find most firewall-related code at: 
+click/elements/standards
+
+Then go to 
+evaluation/etc/statefirewall_01.click 
+
+Check statefirewall_01.click carefully. Take notes of which Elements have been used. 
+
+Then go to 
+click/elements/standards/ 
+
+Find all the elements required by statefirewall_01.click 
+Move those elements into your code. 
+Try to compile. If sth is missing. You should go back to the click directory (decompressed from vnids.tar.gz) and try to find the missing parts. 
+
+
+Repeat the above process until you can successfully compile and run firewall in your system. 
+
+
+
+
